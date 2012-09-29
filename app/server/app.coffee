@@ -14,15 +14,15 @@ dir =
 _.extend dir,
   jsLib: "#{dir.client}/lib"
   clientJs: "#{dir.client}/compiled"
-  clientHtml: "#{dir.client}/compiled"
+  clientHtml: "#{dir.client}/compiled/templates"
 
   css: "#{dir.assets}/css"
   images: "#{dir.assets}/images"
-console.log dir
+
 app.configure ->
   app.set 'port', process.env.PORT || 3000
-  app.set 'views', __dirname + '/views'
-  app.set 'view engine', 'hbs'
+  app.set 'views', dir.clientHtml
+  app.set 'view engine', 'jade'
   app.use express.favicon()
   app.use express.logger 'dev'
   app.use express.bodyParser()
@@ -34,12 +34,10 @@ app.configure ->
   app.use '/public/css', express.static(dir.css)
   app.use '/public/images', express.static(dir.images)
 
-  app.use '/', express.static(dir.clientHtml)
-
 app.configure 'development', ->
   app.use express.errorHandler()
 
-# app.get '/', routes.index
+app.get /^\/(?!public).{0,}/, routes.index
 
 http.createServer(app).listen app.get('port'), ->
   console.log "Express server listening on port " + app.get('port')

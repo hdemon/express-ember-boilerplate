@@ -3,6 +3,4 @@
 #
 
 exports.index = (req, res) ->
-  res.render "index",
-    libJsDir: "public/js/lib"
-    clientJsDir: "public/js"
+  res.render "index"

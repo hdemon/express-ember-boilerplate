@@ -6,7 +6,8 @@
   "dependencies": {
     "coffee-script": "latest",
     "underscore": "latest",
-    "express": "latest"
+    "express": "latest",
+    "jade": "latest"
   },
   "devDependencies": {
     "mocha": "latest",
