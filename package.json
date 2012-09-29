@@ -1,7 +1,6 @@
 {
-  "name": "hdemon.net",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.1-1",
   "main": "./server.js",
   "dependencies": {
     "coffee-script": "latest",
@@ -16,10 +15,15 @@
     "grunt": "latest",
     "grunt-coffee": "latest"
   },
-  "scripts": {
-    "start": "supervisor app/server/app.coffee"
-  },
   "engines": {
     "node": "0.8.x"
-  }
+  },
+
+  // for nodejitsu
+  "scripts": {
+    "start": "coffee app/server/app.coffee"
+  },
+  // "subdomain": "hdemon.express-ember-boilerplate",
+  "subdomain": "",
+  "name": "express-ember-boilerplate"
 }
