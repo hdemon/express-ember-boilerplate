@@ -1,6 +1,6 @@
 module.exports = (grunt) ->
   grunt.loadNpmTasks "grunt-coffee"
-  
+
   # Project configuration.
   grunt.initConfig
     pkg: "<json:package.json>"
@@ -38,6 +38,6 @@ module.exports = (grunt) ->
 
     uglify: {}
 
-  
+
   # Default task.
   grunt.registerTask "default", "lint qunit concat min"

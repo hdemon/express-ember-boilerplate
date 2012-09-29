@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
+package.json
 
 app/client/*.js
 app/client/controllers/*.js
 app/client/views/*.js
-
