@@ -36,6 +36,7 @@ files = [
   'controllers/items'
   'controllers/item'
   'controllers/sections'
+  'controllers/events'
 
   'views'
   'views/application'
@@ -43,6 +44,7 @@ files = [
   'views/items'
   'views/item'
   'views/sections'
+  'views/events'
 
   'routes'
 

@@ -23,6 +23,9 @@ define ["lib/ember", 'app'], (Ember, App) ->
       doItems: (router, event) ->
         router.transitionTo "items.index"
 
+      doEvents: (router, event) ->
+        router.transitionTo "events.index"
+
       home: Ember.Route.extend
         route: "/"
         connectOutlets: (router, event) ->
@@ -70,3 +73,11 @@ define ["lib/ember", 'app'], (Ember, App) ->
         doItem: (router, event) ->
           router.transitionTo "item",
             item_id: event.context.id
+
+      events: Ember.Route.extend
+        route: "/events"
+
+        index: Ember.Route.extend
+          route: "/"
+          connectOutlets: (router, context) ->
+            router.get("applicationController").connectOutlet "events"

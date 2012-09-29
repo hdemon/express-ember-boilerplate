@@ -29,6 +29,6 @@ requirejs.config({
   }
 });
 
-files = ['app', 'controllers', 'controllers/application', 'controllers/home', 'controllers/items', 'controllers/item', 'controllers/sections', 'views', 'views/application', 'views/home', 'views/items', 'views/item', 'views/sections', 'routes', 'lib/handlebars-1.0.0.beta.6', 'lib/bootstrap.min', 'lib/jquery.lorem', 'init'];
+files = ['app', 'controllers', 'controllers/application', 'controllers/home', 'controllers/items', 'controllers/item', 'controllers/sections', 'controllers/events', 'views', 'views/application', 'views/home', 'views/items', 'views/item', 'views/sections', 'views/events', 'routes', 'lib/handlebars-1.0.0.beta.6', 'lib/bootstrap.min', 'lib/jquery.lorem', 'init'];
 
 require(files);

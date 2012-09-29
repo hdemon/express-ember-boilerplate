@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Ember.js Router Example</title>
-    <meta name="description" content="Example of a basic Ember.js application with a Router" />
-    <meta name="author" content="http://codebrief.com" />
+    <title>Ember.js Example</title>
+    <meta name="description" content="Example of a basic Ember.js application" />
+    <meta name="author" content="http://hdemon.net" />
+    <!-- <meta name="author" content="http://codebrief.com" /> -->
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -28,12 +29,13 @@
       <div class="navbar navbar-fixed-top">
         <div class="navbar-inner">
           <div class="container">
-            <a class="brand" href="#">Ember.js Router Example</a>
+            <a class="brand" href="#">Ember.js Example</a>
             <div class="nav-collapse">
               <ul class="nav">
                 <li class="home" {{bindAttr class="isHome:active"}}><a {{action "doHome"}}>Home</a></li>
                 <li class="sections" {{bindAttr class="isSections:active"}}><a {{action "doSections"}}>Sections</a></li>
                 <li class="items" {{bindAttr class="isItems:active"}}><a {{action "doItems"}}>Items</a></li>
+                <li class="events" {{bindAttr class="isEvents:active"}}><a {{action "doEvents"}}>Events</a></li>
               </ul>
             </div>
           </div>
@@ -47,10 +49,10 @@
 
     <script type="text/x-handlebars" data-template-name="home">
       <div class="hero-unit">
-        <h1>Ember.js Routing Example</h1>
+        <h1>Ember.js Example</h1>
         <p>
-          This is a quick example showing basic usage of the Ember Router and outlets.<br />
-          View it on <a href="https://github.com/ghempton/ember-router-example">GitHub</a>.
+          This is a quick example showing basic usage of the Ember.<br />
+          This is based on <a href="https://github.com/ghempton/ember-router-example">'ember-router-example'</a>.
         </p>
       </div>
     </script>
@@ -106,12 +108,21 @@
       </header>
       <ul class="nav nav-tabs nav-stacked">
         {{#each item in content}}
-          <li><a {{action "doItem" context="item"}}>{{item.title}}</a></li>
+          <li>
+            <a {{action "doItem" context="item"}}>
+              {{item.title}}
+            </a>
+          </li>
         {{/each}}
       </ul>
     </script>
 
     <script type="text/x-handlebars" data-template-name="item">
+      <h1>{{title}}</h1>
+      {{{description}}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="events">
       <h1>{{title}}</h1>
       {{{description}}}
     </script>

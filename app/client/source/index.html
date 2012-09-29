@@ -34,6 +34,7 @@
                 <li class="home" {{bindAttr class="isHome:active"}}><a {{action "doHome"}}>Home</a></li>
                 <li class="sections" {{bindAttr class="isSections:active"}}><a {{action "doSections"}}>Sections</a></li>
                 <li class="items" {{bindAttr class="isItems:active"}}><a {{action "doItems"}}>Items</a></li>
+                <li class="events" {{bindAttr class="isEvents:active"}}><a {{action "doEvents"}}>Events</a></li>
               </ul>
             </div>
           </div>
@@ -106,12 +107,21 @@
       </header>
       <ul class="nav nav-tabs nav-stacked">
         {{#each item in content}}
-          <li><a {{action "doItem" context="item"}}>{{item.title}}</a></li>
+          <li>
+            <a {{action "doItem" context="item"}}>
+              {{item.title}}
+            </a>
+          </li>
         {{/each}}
       </ul>
     </script>
 
     <script type="text/x-handlebars" data-template-name="item">
+      <h1>{{title}}</h1>
+      {{{description}}}
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="events">
       <h1>{{title}}</h1>
       {{{description}}}
     </script>

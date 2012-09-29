@@ -28,6 +28,9 @@ define(["lib/ember", 'app'], function(Ember, App) {
       doItems: function(router, event) {
         return router.transitionTo("items.index");
       },
+      doEvents: function(router, event) {
+        return router.transitionTo("events.index");
+      },
       home: Ember.Route.extend({
         route: "/",
         connectOutlets: function(router, event) {
@@ -81,6 +84,15 @@ define(["lib/ember", 'app'], function(Ember, App) {
             item_id: event.context.id
           });
         }
+      }),
+      events: Ember.Route.extend({
+        route: "/events",
+        index: Ember.Route.extend({
+          route: "/",
+          connectOutlets: function(router, context) {
+            return router.get("applicationController").connectOutlet("events");
+          }
+        })
       })
     })
   });
