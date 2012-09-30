@@ -1,4 +1,4 @@
-define ['lib/underscore-min', 'lib/ember', 'app', 'controllers'], (_, Ember, App) ->
+define ['compiled/app', './core'], (App) ->
   App.SectionsController =
     Ember.Controller.extend
       isSectionA: App.util.stateFlag("sectionA")

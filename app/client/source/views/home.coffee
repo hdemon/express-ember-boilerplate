@@ -1,3 +1,3 @@
-define ['lib/underscore-min', 'lib/ember', 'app', 'views'], (_, Ember, App) ->
+define ['compiled/app', './core'], (App) ->
   App.HomeView =
     Ember.View.extend(templateName: "home")

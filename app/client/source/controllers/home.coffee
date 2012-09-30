@@ -1,3 +1,3 @@
-define ['lib/underscore-min', 'lib/ember', 'app', 'controllers'], (_, Ember, App) ->
+define ['compiled/app', './core'], (App) ->
   App.HomeController =
     Ember.Controller.extend()

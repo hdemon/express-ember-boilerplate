@@ -1,4 +1,4 @@
-define ['lib/underscore-min', 'lib/ember', 'app'], (_, Ember, App) ->
+define ['lib/underscore-min', 'lib/ember'], (_, Ember) ->
   # Handlebars helper to generate lorem ipsum text
 
   Ember.Handlebars.registerHelper "lorem", (options) ->

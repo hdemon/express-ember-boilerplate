@@ -1,4 +1,4 @@
-define ['lib/underscore-min', 'lib/ember', 'app'], (_, Ember, App) ->
+define ['compiled/app', 'lib/handlebars-1.0.0.beta.6'], (App, Handlebars) ->
   # A helper function to define a property used to render the navigation. Returns
   # true if a state with the specified name is somewhere along the current route.
   App.util = {}

@@ -29,7 +29,7 @@ app.configure ->
   app.use app.router
 
   app.use '/public/js/lib', express.static(dir.jsLib)
-  app.use '/public/js', express.static(dir.clientJs)
+  app.use '/public/js/compiled', express.static(dir.clientJs)
   app.use '/public/css', express.static(dir.css)
   app.use '/public/images', express.static(dir.images)
 

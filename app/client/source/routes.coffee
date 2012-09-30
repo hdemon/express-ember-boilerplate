@@ -1,4 +1,4 @@
-define ["lib/ember", 'app'], (Ember, App) ->
+define ['compiled/app'], (App) ->
 
   # A helper function to define routes for better code reuse
   sectionRoute = (name) ->

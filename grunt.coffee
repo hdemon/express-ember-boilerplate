@@ -4,7 +4,7 @@ module.exports = (grunt) ->
   # Project configuration.
   grunt.initConfig
     pkg: "<json:package.json>"
-    files: ["app/client/**/*.coffee"]
+    files: ["app/**/*.coffee"]
     concat:
       dist:
         src: ["<banner:meta.banner>", "<file_strip_banner:lib/<%= pkg.name %>.js>"]
@@ -17,17 +17,17 @@ module.exports = (grunt) ->
 
     coffee:
       app:
-        src: "app/client/source/*.coffee"
+        src: "app/client/compiled/*.coffee"
         dest: "app/client/compiled"
         options:
           bare: true
       controllers:
-        src: "app/client/source/controllers/*.coffee"
+        src: "app/client/compiled/controllers/*.coffee"
         dest: "app/client/compiled/controllers"
         options:
           bare: true
       views:
-        src: "app/client/source/views/*.coffee"
+        src: "app/client/compiled/views/*.coffee"
         dest: "app/client/compiled/views"
         options:
           bare: true

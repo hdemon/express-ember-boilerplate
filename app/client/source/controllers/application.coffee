@@ -1,4 +1,4 @@
-define ['lib/underscore-min', 'lib/ember', 'app', 'controllers'], (_, Ember, App) ->
+define ['compiled/app', './core'], (App) ->
   App.ApplicationController =
     Ember.Controller.extend
       isHome: App.util.stateFlag("home")

@@ -1,2 +1,2 @@
-define ['lib/underscore-min', 'lib/ember', 'app', 'views'], (_, Ember, App) ->
+define ['compiled/app', './core'], (App) ->
   App.EventsView = Ember.View.extend(templateName: "item")

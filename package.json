@@ -19,11 +19,10 @@
     "node": "0.8.x"
   },
 
-  // for nodejitsu
   "scripts": {
     "start": "coffee app/server/app.coffee"
   },
-  // "subdomain": "hdemon.express-ember-boilerplate",
+
   "subdomain": "",
   "name": "express-ember-boilerplate"
 }
