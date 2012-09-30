@@ -3,6 +3,7 @@ routes = require './routes'
 http = require 'http'
 path = require 'path'
 _ = require 'underscore'
+gzippo = require 'gzippo'
 
 app = express()
 
@@ -28,10 +29,12 @@ app.configure ->
   app.use express.methodOverride()
   app.use app.router
 
-  app.use '/public/js/lib', express.static(dir.jsLib)
-  app.use '/public/js/compiled', express.static(dir.clientJs)
-  app.use '/public/css', express.static(dir.css)
-  app.use '/public/images', express.static(dir.images)
+  app.use '/public/js/lib', gzippo.staticGzip(dir.jsLib)
+  app.use '/public/js/compiled', gzippo.staticGzip(dir.clientJs)
+  app.use '/public/css', gzippo.staticGzip(dir.css)
+  app.use '/public/images', gzippo.staticGzip(dir.images)
+
+  app.use express.compress()
 
 app.configure 'development', ->
   app.use express.errorHandler()
