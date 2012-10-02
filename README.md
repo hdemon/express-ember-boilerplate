@@ -4,5 +4,7 @@ It is a boilerplate of Ember.js based on express.
 
 ## Usage
 
-+ `grunt coffee`
-+ `npm start`
+### Development
+
++ `grunt watch`
++ `supervisor app/server/app.coffee`
