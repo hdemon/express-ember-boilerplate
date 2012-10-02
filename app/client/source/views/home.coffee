@@ -1,3 +1,2 @@
-define ['compiled/app', './core'], (App) ->
-  App.HomeView =
-    Ember.View.extend(templateName: "home")
+App.HomeView =
+  Ember.View.extend(templateName: "home")

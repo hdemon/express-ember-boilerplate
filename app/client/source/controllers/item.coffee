@@ -1,3 +1,2 @@
-define ['compiled/app', './core'], (App) ->
-  App.ItemController =
-    Ember.ObjectController.extend()
+App.ItemController =
+  Ember.ObjectController.extend()

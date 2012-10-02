@@ -1,28 +1,28 @@
 {
   "description": "",
-  "version": "0.0.1-1",
+  "version": "0.0.1-4",
   "main": "./server.js",
   "dependencies": {
     "coffee-script": "latest",
     "underscore": "latest",
     "express": "latest",
-    "jade": "latest"
+    "jade": "latest",
+    "gzippo": "latest"
   },
   "devDependencies": {
     "mocha": "latest",
     "sinon": "latest",
     "supervisor": "latest",
     "grunt": "latest",
-    "grunt-coffee": "latest"
+    "grunt-coffee": "latest",
+    "grunt-contrib-copy": "latest"
   },
   "engines": {
     "node": "0.8.x"
   },
-
   "scripts": {
     "start": "coffee app/server/app.coffee"
   },
-
-  "subdomain": "",
+  "subdomain": "hdemon.express-ember-boilerplate",
   "name": "express-ember-boilerplate"
 }

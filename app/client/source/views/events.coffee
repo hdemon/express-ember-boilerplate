@@ -1,2 +1,1 @@
-define ['compiled/app', './core'], (App) ->
-  App.EventsView = Ember.View.extend(templateName: "item")
+App.EventsView = Ember.View.extend(templateName: "item")
