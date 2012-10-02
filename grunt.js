@@ -58,14 +58,14 @@
       },
       watch: {
         files: ["./**/*.coffee"],
-        tasks: "coffee copy concat"
-      },
-      build: {
-        tasks: "coffee copy concat"
+        tasks: "build"
       },
       uglify: {}
     });
-    return grunt.registerTask("default", "grunt watch");
+    grunt.registerTask("default", "grunt watch");
+    return grunt.registerTask('build', 'build', function() {
+      return grunt.task.run('coffee copy concat');
+    });
   };
 
 }).call(this);

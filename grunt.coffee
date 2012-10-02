@@ -57,13 +57,13 @@ module.exports = (grunt) ->
 
     watch:
       files: ["./**/*.coffee"]
-      tasks: "coffee copy concat"
-
-    build:
-      tasks: "coffee copy concat"
+      tasks: "build"
 
     uglify: {}
 
 
   # Default task.
   grunt.registerTask "default", "grunt watch"
+
+  grunt.registerTask 'build', 'build', () ->
+    grunt.task.run 'coffee copy concat'
